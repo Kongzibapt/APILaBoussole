@@ -15,14 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Email
+// -- GET --
 Route::get('/emails','App\Http\Controllers\EmailController@index');
-
+// -- POST --
 Route::post('/emails','App\Http\Controllers\EmailController@store');
 
 
 // Team
+// -- GET --
 Route::get('/teams','App\Http\Controllers\TeamController@index');
 Route::get('/teams/stats','App\Http\Controllers\TeamController@getStats');
-
+// -- POST --
 Route::post('/teams','App\Http\Controllers\TeamController@store');
 Route::post('/teams/time/{id}','App\Http\Controllers\TeamController@setTime');
